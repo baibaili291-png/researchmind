@@ -1,3 +1,10 @@
+# 基础部署：只跑应用本身。
+#
+# 默认存储是 SQLite（证据账本落在容器内的 /app/data 卷），不依赖任何外部服务，
+# 因此可以直接托管在只提供一个 HTTP 端口的平台上。
+#
+# 需要生产级 PostgreSQL + Redis 时，叠加生产覆盖文件：
+#   docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 services:
   api:
     build:
@@ -11,23 +18,5 @@ services:
       - researchmind-data:/app/data
     restart: unless-stopped
 
-  postgres:
-    image: pgvector/pgvector:pg16
-    environment:
-      POSTGRES_DB: researchmind
-      POSTGRES_USER: researchmind
-      POSTGRES_PASSWORD: researchmind
-    ports:
-      - "5432:5432"
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-      - ../backend/sql/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
-
-  redis:
-    image: redis:7-alpine
-    ports:
-      - "6379:6379"
-
 volumes:
   researchmind-data:
-  pgdata:

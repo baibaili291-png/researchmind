@@ -1,0 +1,35 @@
+# 生产覆盖：在基础部署之上追加 PostgreSQL(pgvector) 与 Redis。
+#
+# 用法：
+#   docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+#
+# 注意：这是**可选**的增强路径。默认单机部署走 SQLite，不需要这里的任何服务；
+# 只有需要「跨进程限速共享」「向量复用历史证据」「多人共享证据账本」时才启用。
+services:
+  api:
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      RESEARCHMIND_DATABASE_URL: postgresql+asyncpg://researchmind:researchmind@postgres:5432/researchmind
+      RESEARCHMIND_REDIS_URL: redis://redis:6379/0
+
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_DB: researchmind
+      POSTGRES_USER: researchmind
+      POSTGRES_PASSWORD: researchmind
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ../backend/sql/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+volumes:
+  pgdata:
