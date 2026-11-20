@@ -1,0 +1,18 @@
+report rendered: False
+header badge: 联网研究 · 真实网页
+badge classes: tb-badge live
+trace items: 19
+trace labels: 启动研究|规划拆解|联网检索|抓取正文|抽取证据|交叉验证|策略路由|联网检索|抓取正文|抽取证据|交叉验证|策略路由|联网检索|抓取正文|抽取证据|交叉验证|策略路由|生成报告|引用审计
+audit metrics: 0|0|0%|未通过
+report h2 sections: 数据来源说明|未能生成有效结论|研究局限与未覆盖项
+citation refs: 0
+has provenance text: True
+click evidence tab: ok
+evidence cards: 0
+depth badges: 
+click cite tab back: ok
+click citation: None
+drawer open: None
+drawer title: None
+drawer has raw text: False
+screenshot saved

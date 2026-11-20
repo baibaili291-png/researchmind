@@ -1,0 +1,5 @@
+MODE endpoint: {"mode": "web", "use_web": true, "llm_configured": false, "search_key_configured": false}
+HEALTH: {"status": "ok", "service": "researchmind"}
+GET /: 6663 bytes
+GET /static/app.js: 19592 bytes
+GET /static/styles.css: 24818 bytes

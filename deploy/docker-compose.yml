@@ -1,0 +1,33 @@
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - researchmind-data:/app/data
+    restart: unless-stopped
+
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_DB: researchmind
+      POSTGRES_USER: researchmind
+      POSTGRES_PASSWORD: researchmind
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ../backend/sql/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+volumes:
+  researchmind-data:
+  pgdata:

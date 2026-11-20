@@ -1,0 +1,28 @@
+# 运行产物
+__pycache__/
+*.pyc
+*.db
+node_modules/
+dist/
+
+# 密钥（绝不入库）
+.env
+deploy/.env
+
+# 本地运行数据：报告、预算设置、证据账本
+data/
+
+# 排障过程产物（诊断脚本输出与一次性探针，不属于项目本体）
+eval/*_output.txt
+eval/out_*.json
+eval/probe_*.py
+eval/diag_*.py
+
+# 编辑器 / 系统
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# 本地备份
+*.bak-*

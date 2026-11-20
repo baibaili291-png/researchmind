@@ -1,0 +1,432 @@
+{
+  "evaluated_at": "2026-11-20T05:32:10.118447+00:00",
+  "count": 20,
+  "summary": {
+    "quote_fidelity": 1.0,
+    "citation_resolvability": 1.0,
+    "fact_coverage": 0.229,
+    "conflict_disclosure": 1.0
+  },
+  "results": [
+    {
+      "id": "Q01",
+      "type": "unique_answer",
+      "query": "中国信息通信产业的官方主管部门是哪个部门？",
+      "status": "completed",
+      "metrics": {
+        "quote_fidelity": 1.0,
+        "citation_resolvability": 1.0,
+        "fact_coverage": 0.0,
+        "conflict_disclosure": 1.0
+      },
+      "evidence_count": 20,
+      "conflict_count": 1,
+      "audit": {
+        "citations": 27,
+        "unresolved": [],
+        "orphans": [],
+        "coverage": 1.0,
+        "passed": true
+      }
+    },
+    {
+      "id": "Q02",
+      "type": "unique_answer",
+      "query": "《生成式人工智能服务管理暂行办法》开始施行的日期是什么时候？",
+      "status": "completed",
+      "metrics": {
+        "quote_fidelity": 1.0,
+        "citation_resolvability": 1.0,
+        "fact_coverage": 0.0,
+        "conflict_disclosure": 1.0
+      },
+      "evidence_count": 20,
+      "conflict_count": 1,
+      "audit": {
+        "citations": 27,
+        "unresolved": [],
+        "orphans": [],
+        "coverage": 1.0,
+        "passed": true
+      }
+    },
+    {
+      "id": "Q03",
+      "type": "unique_answer",
+      "query": "中国的国家统计局全称是什么？",
+      "status": "completed",
+      "metrics": {
+        "quote_fidelity": 1.0,
+        "citation_resolvability": 1.0,
+        "fact_coverage": 0.0,
+        "conflict_disclosure": 1.0
+      },
+      "evidence_count": 20,
+      "conflict_count": 1,
+      "audit": {
+        "citations": 27,
+        "unresolved": [],
+        "orphans": [],
+        "coverage": 1.0,
+        "passed": true
+      }
+    },
+    {
+      "id": "Q04",
+      "type": "unique_answer",
+      "query": "公开资料显示，DeepSeek 公司总部位于中国哪个城市？",
+      "status": "completed",
+      "metrics": {
+        "quote_fidelity": 1.0,
+        "citation_resolvability": 1.0,
+        "fact_coverage": 0.0,
+        "conflict_disclosure": 1.0
+      },
+      "evidence_count": 20,
+      "conflict_count": 1,
+      "audit": {
+        "citations": 27,
+        "unresolved": [],
+        "orphans": [],
+        "coverage": 1.0,
+        "passed": true
+      }
+    },
+    {
+      "id": "Q05",
+      "type": "unique_answer",
+      "query": "中国信通院的全称是什么？",
+      "status": "completed",
+      "metrics": {
+        "quote_fidelity": 1.0,
+        "citation_resolvability": 1.0,
+        "fact_coverage": 0.0,
+        "conflict_disclosure": 1.0
+      },
+      "evidence_count": 20,
+      "conflict_count": 1,
+      "audit": {
+        "citations": 27,
+        "unresolved": [],
+        "orphans": [],
+        "coverage": 1.0,
+        "passed": true
+      }
+    },
+    {
+      "id": "Q06",
+      "type": "unique_answer",
+      "query": "在中国，负责网络安全与数据安全监管的国务院直属机构简称什么？",
+      "status": "completed",
+      "metrics": {
+        "quote_fidelity": 1.0,
+        "citation_resolvability": 1.0,
+        "fact_coverage": 0.0,
+        "conflict_disclosure": 1.0
+      },
+      "evidence_count": 20,
+      "conflict_count": 1,
+      "audit": {
+        "citations": 27,
+        "unresolved": [],
+        "orphans": [],
+        "coverage": 1.0,
+        "passed": true
+      }
+    },
+    {
+      "id": "Q07",
+      "type": "unique_answer",
+      "query": "国际上广泛使用的编程语言 Python 的创始人是谁？",
+      "status": "completed",
+      "metrics": {
+        "quote_fidelity": 1.0,
+        "citation_resolvability": 1.0,
+        "fact_coverage": 0.0,
+        "conflict_disclosure": 1.0
+      },
+      "evidence_count": 20,
+      "conflict_count": 1,
+      "audit": {
+        "citations": 27,
+        "unresolved": [],
+        "orphans": [],
+        "coverage": 1.0,
+        "passed": true
+      }
+    },
+    {
+      "id": "Q08",
+      "type": "unique_answer",
+      "query": "中国 AI Agent 行业中，阿里巴巴推出的通义系列大模型品牌叫什么？",
+      "status": "completed",
+      "metrics": {
+        "quote_fidelity": 1.0,
+        "citation_resolvability": 1.0,
+        "fact_coverage": 0.0,
+        "conflict_disclosure": 1.0
+      },
+      "evidence_count": 20,
+      "conflict_count": 1,
+      "audit": {
+        "citations": 27,
+        "unresolved": [],
+        "orphans": [],
+        "coverage": 1.0,
+        "passed": true
+      }
+    },
+    {
+      "id": "Q09",
+      "type": "multi_source",
+      "query": "深度研究2026年中国 AI Agent 行业，分析市场规模、主要企业、技术发展方向、商业模式和未来机会。",
+      "status": "completed",
+      "metrics": {
+        "quote_fidelity": 1.0,
+        "citation_resolvability": 1.0,
+        "fact_coverage": 1.0,
+        "conflict_disclosure": 1.0
+      },
+      "evidence_count": 20,
+      "conflict_count": 1,
+      "audit": {
+        "citations": 27,
+        "unresolved": [],
+        "orphans": [],
+        "coverage": 1.0,
+        "passed": true
+      }
+    },
+    {
+      "id": "Q10",
+      "type": "multi_source",
+      "query": "调研中国新能源汽车行业的发展现状，包括产销量、出口、主要车企和技术路线。",
+      "status": "completed",
+      "metrics": {
+        "quote_fidelity": 1.0,
+        "citation_resolvability": 1.0,
+        "fact_coverage": 0.25,
+        "conflict_disclosure": 1.0
+      },
+      "evidence_count": 20,
+      "conflict_count": 1,
+      "audit": {
+        "citations": 27,
+        "unresolved": [],
+        "orphans": [],
+        "coverage": 1.0,
+        "passed": true
+      }
+    },
+    {
+      "id": "Q11",
+      "type": "multi_source",
+      "query": "分析全球大模型推理芯片市场的竞争格局与主要厂商。",
+      "status": "completed",
+      "metrics": {
+        "quote_fidelity": 1.0,
+        "citation_resolvability": 1.0,
+        "fact_coverage": 0.333,
+        "conflict_disclosure": 1.0
+      },
+      "evidence_count": 20,
+      "conflict_count": 1,
+      "audit": {
+        "citations": 27,
+        "unresolved": [],
+        "orphans": [],
+        "coverage": 1.0,
+        "passed": true
+      }
+    },
+    {
+      "id": "Q12",
+      "type": "multi_source",
+      "query": "研究中国企业出海东南亚的数据合规要求与主要风险。",
+      "status": "completed",
+      "metrics": {
+        "quote_fidelity": 1.0,
+        "citation_resolvability": 1.0,
+        "fact_coverage": 0.667,
+        "conflict_disclosure": 1.0
+      },
+      "evidence_count": 20,
+      "conflict_count": 1,
+      "audit": {
+        "citations": 27,
+        "unresolved": [],
+        "orphans": [],
+        "coverage": 1.0,
+        "passed": true
+      }
+    },
+    {
+      "id": "Q13",
+      "type": "multi_source",
+      "query": "分析中国跨境电商行业的发展趋势、主要平台与监管环境。",
+      "status": "completed",
+      "metrics": {
+        "quote_fidelity": 1.0,
+        "citation_resolvability": 1.0,
+        "fact_coverage": 0.667,
+        "conflict_disclosure": 1.0
+      },
+      "evidence_count": 20,
+      "conflict_count": 1,
+      "audit": {
+        "citations": 27,
+        "unresolved": [],
+        "orphans": [],
+        "coverage": 1.0,
+        "passed": true
+      }
+    },
+    {
+      "id": "Q14",
+      "type": "multi_source",
+      "query": "调研储能行业的技术路线、成本结构与商业模式。",
+      "status": "completed",
+      "metrics": {
+        "quote_fidelity": 1.0,
+        "citation_resolvability": 1.0,
+        "fact_coverage": 1.0,
+        "conflict_disclosure": 1.0
+      },
+      "evidence_count": 20,
+      "conflict_count": 1,
+      "audit": {
+        "citations": 27,
+        "unresolved": [],
+        "orphans": [],
+        "coverage": 1.0,
+        "passed": true
+      }
+    },
+    {
+      "id": "Q15",
+      "type": "multi_source",
+      "query": "研究中国医疗 AI 的监管路径、主要应用场景和落地挑战。",
+      "status": "completed",
+      "metrics": {
+        "quote_fidelity": 1.0,
+        "citation_resolvability": 1.0,
+        "fact_coverage": 0.667,
+        "conflict_disclosure": 1.0
+      },
+      "evidence_count": 20,
+      "conflict_count": 1,
+      "audit": {
+        "citations": 27,
+        "unresolved": [],
+        "orphans": [],
+        "coverage": 1.0,
+        "passed": true
+      }
+    },
+    {
+      "id": "Q16",
+      "type": "insufficient_info",
+      "query": "某公司宣称其未公开的内部营收数据是多少？",
+      "status": "completed",
+      "metrics": {
+        "quote_fidelity": 1.0,
+        "citation_resolvability": 1.0,
+        "fact_coverage": 0.0,
+        "conflict_disclosure": 1.0
+      },
+      "evidence_count": 20,
+      "conflict_count": 1,
+      "audit": {
+        "citations": 27,
+        "unresolved": [],
+        "orphans": [],
+        "coverage": 1.0,
+        "passed": true
+      }
+    },
+    {
+      "id": "Q17",
+      "type": "insufficient_info",
+      "query": "请给出 2030 年中国 AI Agent 市场规模的精确数值。",
+      "status": "completed",
+      "metrics": {
+        "quote_fidelity": 1.0,
+        "citation_resolvability": 1.0,
+        "fact_coverage": 0.0,
+        "conflict_disclosure": 1.0
+      },
+      "evidence_count": 20,
+      "conflict_count": 1,
+      "audit": {
+        "citations": 27,
+        "unresolved": [],
+        "orphans": [],
+        "coverage": 1.0,
+        "passed": true
+      }
+    },
+    {
+      "id": "Q18",
+      "type": "insufficient_info",
+      "query": "某未公开融资的初创公司最新估值是多少？",
+      "status": "completed",
+      "metrics": {
+        "quote_fidelity": 1.0,
+        "citation_resolvability": 1.0,
+        "fact_coverage": 0.0,
+        "conflict_disclosure": 1.0
+      },
+      "evidence_count": 20,
+      "conflict_count": 1,
+      "audit": {
+        "citations": 27,
+        "unresolved": [],
+        "orphans": [],
+        "coverage": 1.0,
+        "passed": true
+      }
+    },
+    {
+      "id": "Q19",
+      "type": "insufficient_info",
+      "query": "请提供某政府机构尚未发布的政策文件全文。",
+      "status": "completed",
+      "metrics": {
+        "quote_fidelity": 1.0,
+        "citation_resolvability": 1.0,
+        "fact_coverage": 0.0,
+        "conflict_disclosure": 1.0
+      },
+      "evidence_count": 20,
+      "conflict_count": 1,
+      "audit": {
+        "citations": 27,
+        "unresolved": [],
+        "orphans": [],
+        "coverage": 1.0,
+        "passed": true
+      }
+    },
+    {
+      "id": "Q20",
+      "type": "insufficient_info",
+      "query": "请说明某项仍在内部测试中的技术细节。",
+      "status": "completed",
+      "metrics": {
+        "quote_fidelity": 1.0,
+        "citation_resolvability": 1.0,
+        "fact_coverage": 0.0,
+        "conflict_disclosure": 1.0
+      },
+      "evidence_count": 20,
+      "conflict_count": 1,
+      "audit": {
+        "citations": 27,
+        "unresolved": [],
+        "orphans": [],
+        "coverage": 1.0,
+        "passed": true
+      }
+    }
+  ]
+}

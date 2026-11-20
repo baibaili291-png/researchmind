@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ResearchMind · 自主深度研究助手</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/><path d="M8 11h6M11 8v6"/>
+      </svg>
+    </div>
+    <div>
+      <div class="brand-name">ResearchMind</div>
+      <div class="brand-sub">自主深度研究工作台 · Deep Research Agent</div>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <div class="tb-badge" id="providerPill"><span class="dot"></span><span id="providerText">离线模式 · 零依赖</span></div>
+    <div class="tb-sep"></div>
+    <div class="tb-badge">v1.0 · Phase 1</div>
+  </div>
+</header>
+
+<main class="layout">
+  <!-- 左：研究控制台 -->
+  <section class="panel input-panel">
+    <div class="panel-head">
+      <div class="panel-title">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        <h2>研究控制台</h2>
+      </div>
+      <span class="panel-hint">CONFIGURE</span>
+    </div>
+    <div class="input-body">
+      <div class="field-label">研究问题</div>
+      <div class="query-wrap">
+        <span class="query-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg></span>
+        <textarea id="queryInput" maxlength="500" placeholder="输入一个需要深度调研的问题…">深度研究2026年中国 AI Agent 行业，分析市场规模、主要企业、技术发展方向、商业模式和未来机会。</textarea>
+        <span class="char-count" id="charCount">0 / 500</span>
+      </div>
+
+      <div class="section-label">快速示例</div>
+      <div class="examples">
+        <button class="chip" data-q="深度研究2026年中国 AI Agent 行业，分析市场规模、主要企业、技术发展方向、商业模式和未来机会。"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>AI Agent 行业</button>
+        <button class="chip" data-q="调研 2026 年新能源汽车出海的合规要求与主要市场壁垒。"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17h18M5 17l2-8h10l2 8M7 9V6h10v3"/></svg>新能源车出海</button>
+        <button class="chip" data-q="分析全球大模型推理芯片的技术路线与主要厂商竞争格局。"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg>推理芯片格局</button>
+      </div>
+
+      <div class="section-label">研究预算</div>
+      <div class="budget-grid">
+        <div class="budget-item"><label>迭代轮次</label><input type="number" id="maxIter" value="3" min="1" max="8"></div>
+        <div class="budget-item"><label>搜索次数</label><input type="number" id="maxSearch" value="24" min="4" max="100"></div>
+        <div class="budget-item"><label>证据上限</label><input type="number" id="maxEvidence" value="120" min="10" max="500"></div>
+      </div>
+
+      <button class="run-btn" id="runBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 3 14 9-14 9V3Z"/></svg>
+        <span id="runBtnText">开始研究</span>
+      </button>
+      <div class="run-meta" id="runMeta"></div>
+
+      <div class="flow-strip">
+        <div class="flow-step"><span class="n">1</span><span class="l">规划</span></div><span class="flow-arrow">›</span>
+        <div class="flow-step"><span class="n">2</span><span class="l">检索</span></div><span class="flow-arrow">›</span>
+        <div class="flow-step"><span class="n">3</span><span class="l">抽取</span></div><span class="flow-arrow">›</span>
+        <div class="flow-step"><span class="n">4</span><span class="l">验证</span></div><span class="flow-arrow">›</span>
+        <div class="flow-step"><span class="n">5</span><span class="l">成稿</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 中：研究轨迹 -->
+  <section class="panel trace-panel">
+    <div class="panel-head">
+      <div class="panel-title">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+        <h2>研究轨迹</h2>
+      </div>
+      <span class="trace-count" id="traceCount">等待任务</span>
+    </div>
+    <div class="trace" id="trace">
+      <div class="trace-empty">
+        <div class="illu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div>
+        <p>启动研究后，这里会实时呈现规划、检索、抽取、验证与回退的每一步。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 右：研究成果 -->
+  <section class="panel report-panel">
+    <div class="panel-head">
+      <div class="panel-title">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></svg></span>
+        <h2>研究成果</h2>
+      </div>
+      <div class="tabs">
+        <button class="tab active" data-tab="report"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h12"/></svg>报告</button>
+        <button class="tab" data-tab="evidence"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>证据账本</button>
+        <button class="tab" data-tab="audit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>引用审计</button>
+      </div>
+    </div>
+    <div class="audit-strip" id="auditBar">
+      <div class="audit-empty">完成研究后，引用审计与质量指标将在此显示</div>
+    </div>
+    <div class="report-body" id="reportBody">
+      <div class="report-empty">
+        <div class="illu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M9 15h6M9 11h3"/></svg></div>
+        <p>报告生成后显示在这里。每条事实性陈述都带有可追溯的引用标记，并附完整的证据与来源。</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

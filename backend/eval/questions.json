@@ -1,0 +1,102 @@
+[
+  {
+    "id": "Q01", "type": "unique_answer", "query": "中国信息通信产业的官方主管部门是哪个部门？",
+    "reference_facts": ["工业和信息化部"],
+    "note": "唯一事实，考察引用是否指向官方来源"
+  },
+  {
+    "id": "Q02", "type": "unique_answer", "query": "《生成式人工智能服务管理暂行办法》开始施行的日期是什么时候？",
+    "reference_facts": ["2023年8月15日"],
+    "note": "唯一日期"
+  },
+  {
+    "id": "Q03", "type": "unique_answer", "query": "中国的国家统计局全称是什么？",
+    "reference_facts": ["中华人民共和国国家统计局"],
+    "note": "机构名称"
+  },
+  {
+    "id": "Q04", "type": "unique_answer", "query": "公开资料显示，DeepSeek 公司总部位于中国哪个城市？",
+    "reference_facts": ["杭州"],
+    "note": "公司信息"
+  },
+  {
+    "id": "Q05", "type": "unique_answer", "query": "中国信通院的全称是什么？",
+    "reference_facts": ["中国信息通信研究院"],
+    "note": "机构全称"
+  },
+  {
+    "id": "Q06", "type": "unique_answer", "query": "在中国，负责网络安全与数据安全监管的国务院直属机构简称什么？",
+    "reference_facts": ["国家网信办"],
+    "note": "监管机构"
+  },
+  {
+    "id": "Q07", "type": "unique_answer", "query": "国际上广泛使用的编程语言 Python 的创始人是谁？",
+    "reference_facts": ["Guido van Rossum"],
+    "note": "跨领域事实"
+  },
+  {
+    "id": "Q08", "type": "unique_answer", "query": "中国 AI Agent 行业中，阿里巴巴推出的通义系列大模型品牌叫什么？",
+    "reference_facts": ["通义千问", "Qwen"],
+    "note": "产品品牌，允许任一命中"
+  },
+  {
+    "id": "Q09", "type": "multi_source", "query": "深度研究2026年中国 AI Agent 行业，分析市场规模、主要企业、技术发展方向、商业模式和未来机会。",
+    "reference_facts": ["市场规模", "主要企业", "技术", "商业模式", "风险"],
+    "note": "多口径题目，重点考察冲突披露与引用覆盖率"
+  },
+  {
+    "id": "Q10", "type": "multi_source", "query": "调研中国新能源汽车行业的发展现状，包括产销量、出口、主要车企和技术路线。",
+    "reference_facts": ["产销量", "出口", "车企", "技术路线"],
+    "note": "多维度行业题"
+  },
+  {
+    "id": "Q11", "type": "multi_source", "query": "分析全球大模型推理芯片市场的竞争格局与主要厂商。",
+    "reference_facts": ["NVIDIA", "竞争格局", "推理"],
+    "note": "全球市场题"
+  },
+  {
+    "id": "Q12", "type": "multi_source", "query": "研究中国企业出海东南亚的数据合规要求与主要风险。",
+    "reference_facts": ["数据合规", "风险", "东南亚"],
+    "note": "合规题"
+  },
+  {
+    "id": "Q13", "type": "multi_source", "query": "分析中国跨境电商行业的发展趋势、主要平台与监管环境。",
+    "reference_facts": ["趋势", "平台", "监管"],
+    "note": "行业趋势题"
+  },
+  {
+    "id": "Q14", "type": "multi_source", "query": "调研储能行业的技术路线、成本结构与商业模式。",
+    "reference_facts": ["技术路线", "成本", "商业模式"],
+    "note": "能源行业题"
+  },
+  {
+    "id": "Q15", "type": "multi_source", "query": "研究中国医疗 AI 的监管路径、主要应用场景和落地挑战。",
+    "reference_facts": ["监管", "应用场景", "挑战"],
+    "note": "垂直行业题"
+  },
+  {
+    "id": "Q16", "type": "insufficient_info", "query": "某公司宣称其未公开的内部营收数据是多少？",
+    "reference_facts": ["信息不足"],
+    "note": "不应编造数据，应标注信息不足"
+  },
+  {
+    "id": "Q17", "type": "insufficient_info", "query": "请给出 2030 年中国 AI Agent 市场规模的精确数值。",
+    "reference_facts": ["预测", "不确定"],
+    "note": "远期预测应标注为预测而非事实"
+  },
+  {
+    "id": "Q18", "type": "insufficient_info", "query": "某未公开融资的初创公司最新估值是多少？",
+    "reference_facts": ["信息不足"],
+    "note": "私域数据不应编造"
+  },
+  {
+    "id": "Q19", "type": "insufficient_info", "query": "请提供某政府机构尚未发布的政策文件全文。",
+    "reference_facts": ["信息不足"],
+    "note": "不存在的文档不应编造"
+  },
+  {
+    "id": "Q20", "type": "insufficient_info", "query": "请说明某项仍在内部测试中的技术细节。",
+    "reference_facts": ["信息不足"],
+    "note": "未公开信息不应编造"
+  }
+]
