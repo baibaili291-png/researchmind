@@ -116,17 +116,24 @@ class ResearchService:
         with self._lock:
             items = sorted(self._runs.values(),
                            key=lambda r: (r.created_at or "", r.id), reverse=True)
-        return [
-            {
+        out: list[dict[str, Any]] = []
+        for r in items[:limit]:
+            # 证据条数用于前端挑"最值得展示"的那份：最新的一条可能只是一次
+            # 小预算试跑，展示效果远不如完整研究。
+            if r.cached_report:
+                count = len(r.cached_report.get("evidence") or [])
+            else:
+                count = len(r.state.evidence) if r.state is not None else 0
+            out.append({
                 "run_id": r.id,
                 "query": r.query,
                 "status": r.status,
                 "created_at": r.created_at,
                 "finished_at": r.finished_at,
                 "has_report": bool(r.state or r.cached_report),
-            }
-            for r in items[:limit]
-        ]
+                "evidence_count": count,
+            })
+        return out
 
     def start(self, query: str, budget: dict[str, Any] | None = None) -> str:
         if budget:

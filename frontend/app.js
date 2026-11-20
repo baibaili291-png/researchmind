@@ -408,8 +408,12 @@
       const resp = await fetch('/runs');
       if (!resp.ok) return;
       const data = await resp.json();
-      const latest = (data.runs || []).find((r) => r.has_report);
-      if (!latest) return;
+      const runs = (data.runs || []).filter((r) => r.has_report);
+      if (!runs.length) return;
+      // 取证据最多的那份，而不是最新的一份：最新可能只是一次小预算试跑，
+      // 展示效果远不如一次完整研究。
+      runs.sort((a, b) => (b.evidence_count || 0) - (a.evidence_count || 0));
+      const latest = runs[0];
       const detail = await fetch(`/runs/${latest.run_id}/report`);
       if (!detail.ok) return;
       state.runId = latest.run_id;
