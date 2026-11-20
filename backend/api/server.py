@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -182,8 +183,11 @@ class Handler(BaseHTTPRequestHandler):
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="ResearchMind zero-dependency server")
-    parser.add_argument("--host", default="127.0.0.1")
-    parser.add_argument("--port", type=int, default=8000)
+    # 容器/云平台通过 PORT 注入端口，且必须绑定 0.0.0.0 才能被反向代理访问；
+    # 本地开发（没有 PORT）仍然只监听 127.0.0.1，不暴露到局域网。
+    default_host = "0.0.0.0" if os.getenv("PORT") else "127.0.0.1"
+    parser.add_argument("--host", default=os.getenv("HOST", default_host))
+    parser.add_argument("--port", type=int, default=int(os.getenv("PORT", "8000")))
     args = parser.parse_args()
     server = ThreadingHTTPServer((args.host, args.port), Handler)
     print(f"ResearchMind running at http://{args.host}:{args.port}")
